@@ -3,11 +3,15 @@ import bodyParser from "body-parser";
 import connectDB from "./config.mjs";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.mjs";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8080;
+
+// Cors
+app.use(cors());
 
 // Middleware
 app.use(bodyParser.json());
