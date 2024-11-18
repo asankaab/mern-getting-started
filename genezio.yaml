@@ -20,7 +20,7 @@ backend:
       # The path to the function's code.
       path: ./
       # The name of the function handler
-      handler: handler
+      handler: app
       # The entry point for the function.
       entry: app.mjs
       # The compatibility of the function handler.
@@ -55,3 +55,4 @@ frontend:
     start: npm run dev
   environment:
     VITE_API_URL: ${{ backend.functions.mern-getting-started.url }}
+  subdomain: indigo-lexical-ermine
