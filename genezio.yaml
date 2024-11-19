@@ -25,6 +25,8 @@ backend:
       entry: app.mjs
       # The compatibility of the function handler.
       type: httpServer
+      # The port that the express server is using for listening
+      port: 3000
   # Scripts are running in the specified `path` directory.
   scripts:
     # List of scripts to run before deploying the frontend.
