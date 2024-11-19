@@ -54,6 +54,8 @@ frontend:
     # List of scripts to run before deploying the frontend.
     deploy: npm install
     build: npm run build
-    start: npm run dev
+    start: 
+      - npm install
+      - npm run dev
   environment:
     VITE_API_URL: ${{ backend.functions.mern-getting-started.url }}
